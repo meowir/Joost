@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joost Klein</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            background: url('assets/joostface.jpg') no-repeat center center fixed;
+            background-size: 100% 100%
+        }
+        div {
+            position: absolute;
+            width: 10vw;
+            height: 10vw;
+            border: none;
+            background-color: unset;
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        #div1 {
+            background-image: url("assets/smile1.png");
+        }
+        #div2 {
+            background-image: url("assets/smile2.png");
+            bottom: 0;
+        }
+        #div3 {
+            background-image: url("assets/smile3.png");
+            right: 0;
+        }
+        #div4 {
+            background-image: url("assets/smile4.png");
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <script>
+        const div1 = document.querySelector('#div1');
+        const div2 = document.querySelector('#div2');
+        const div3 = document.querySelector('#div3');
+        const div4 = document.querySelector('#div4');
+        function sound() {
+            let audio = new Audio();
+            audio.src = "assets/song.mp3";
+            audio.autoplay = true;
+        }
+        div1.addEventListener('click', () => {sound()})
+    </script>
+</body>
+</html>
